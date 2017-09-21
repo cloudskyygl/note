@@ -1,11 +1,13 @@
-* 尝试 bitbucket
+- [] 尝试 bitbucket
 
-* VS 离线安装:https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio-in-offline-environment
+- [] VS 离线安装:https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio-in-offline-environment
 
-* LVM
+- [] LVM
 
-* gparted
+- [] gparted
 
-deeplearn.js* Windows 睡眠和休眠
+- [] deeplearn.js
 
-* Linux 睡眠、休眠和挂起
+- [] Windows 睡眠和休眠
+
+- [] Linux 睡眠、休眠和挂起
