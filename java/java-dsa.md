@@ -1,12 +1,47 @@
+本文基于邓俊辉所写 《数据结构与算法》 (Java描述)
+
 # DSA(Java) 学习笔记
 
-## 术语
+```mermaid
+graph LR
+    定长数组---栈
+    单向链表---栈
+```
 
-本文中对 **声明** 和 **定义** 两个术语的使用参考 StackOverflow 上对于 [What is the difference between declaration and definition in Java?](https://stackoverflow.com/questions/11715485/what-is-the-difference-between-declaration-and-definition-in-java) 的第一个回答中关于 **方法** 的声明和定义的区别。而对于类和变量，本文仅使用定义。
+```mermaid
+graph LR
+    循环数组---队列
+    单向链表---队列
+    双向链表---双端队列
+```
+
+```mermaid
+graph LR
+    定长数组---向量
+    可扩展数组---向量
+```
+
+```mermaid
+graph LR
+    双向链表---列表
+```
+
+```mermaid
+graph LR
+    栈---序列
+    队列---序列
+    双端队列---序列
+    向量---序列
+    列表---序列
+```
+
+## 概念
+
+本文中对 **声明** 和 **定义** 两个术语的使用参考 StackOverflow 上对于问题 [What is the difference between declaration and definition in Java?](https://stackoverflow.com/questions/11715485/what-is-the-difference-between-declaration-and-definition-in-java) 的第一个回答中关于 **方法** 的声明和定义的区别。而对于类和变量，本文仅使用定义。
 
 具体使用总结为下面的例子:
 
-```
+```java
 abstract class SomeClass {                // class declaration
                                           //                          \
     int x;                                // variable declaration      |
@@ -24,7 +59,7 @@ abstract class SomeClass {                // class declaration
 }                                                                     /
 ```
 
-## ADT 的定义
+## ADT 定义
 
 * 定义 ADT 接口
 
@@ -32,9 +67,9 @@ abstract class SomeClass {                // class declaration
 
 * 定义相应的异常类
 
-  *  根据方法可能出现的异常，在 ADT 接口的方法声明中使用 throws 声明所抛出的异常
+  * 根据方法可能出现的异常，在 ADT 接口的方法声明中使用 throws 声明所抛出的异常
 
-## ADT 的实现类
+## ADT 实现类
 
 需要注意的细节
 
@@ -54,10 +89,10 @@ abstract class SomeClass {                // class declaration
 
 * 如果实现类自身处理(try-catch)异常不符合逻辑，那么只能抛出。
 
-基于以上两点，只能在方法体内 **throw** 需要抛出的异常。
-但是，如果需要抛出的异常是 **checked exception**, 又必须在方法声明中 **throws** 要抛出的异常。
-因此只能从异常类的定义上入手，使要抛出的异常类继承自 **RuntimeException**， 而不是 **Exception**，
-使要抛出的异常成为 ** unchecked exception**。
+基于以上两点，只能在方法体内 `throw` 需要抛出的异常。
+但是，如果需要抛出的异常是 **checked exception**, 又必须在方法声明中 `throws` 要抛出的异常。
+因此只能从异常类的定义上入手，使要抛出的异常类继承自 `RuntimeException`， 而不是 `Exception`，
+使要抛出的异常成为 **unchecked exception**。
 
 例如：
 
@@ -65,6 +100,11 @@ abstract class SomeClass {                // class declaration
 但 push 方法是从接口 Stack 继承而来，所以不能在方法声明中 throws, 若要 try-catch,则不符合逻辑，
 因为此处不需要处理此种异常，因为这是上层用户使用 ArrayStack 不当产生的异常，所以需要向上抛出，而不是就地处理，
 因此，只能修改 ArrayStackFullException 定义，使之继承自 RuntimeException 而不是 Exception
+
+---
+2017-11-29 记录
+
+如果 **Overridden** 的方法声明中没有 `throws` 异常，那么 `@Override` 方法不能在其方法声明中 `throws` 检查异常，却能 `throws` RuntimeException。
 
 ### Sundry
 

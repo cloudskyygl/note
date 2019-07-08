@@ -76,4 +76,4 @@ $ chmod 755 /home/git/repositories/gitosis-admin.git/hooks/post-update
 
 ## gitolite
 
-认证是确定用户是谁，授权是决定该用户是否被允许做他想做的事情
+**认证** 是确定用户是谁，**授权** 是决定该用户是否被允许做他想做的事情

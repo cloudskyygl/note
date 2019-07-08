@@ -1,0 +1,3 @@
+## JDBC
+
+https://blogs.oracle.com/dev2dev/get-oracle-jdbc-drivers-and-ucp-from-oracle-maven-repository-without-ides
