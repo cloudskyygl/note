@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 https://github.com/RehabMan/hack-tools 中也有一些可能有用 kext
-=======
 macos重装备份
 
 无线网卡驱动
@@ -19,7 +17,6 @@ bios boot菜单是否要清理
 trim
 关闭睡眠
 声卡注入id是28
->>>>>>> 4bf069ded1a461a8c8d5d24d0548893c86e0d128
 
 
 本文基于 RehabMan 教程
