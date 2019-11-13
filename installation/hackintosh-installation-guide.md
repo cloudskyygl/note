@@ -1,4 +1,25 @@
+<<<<<<< HEAD
 https://github.com/RehabMan/hack-tools 中也有一些可能有用 kext
+=======
+macos重装备份
+
+无线网卡驱动
+
+安装high Sierra并更新获得最新无线网卡驱动
+
+# 注意事项
+
+关闭快速启动，先把机械硬盘拆掉，在win下给macos分区并格式化，再装windows和macos
+macos为ssd预留空间，可能需要到windows下删除分出来的空间，因为可能是apfs
+win和macos时间不同步
+macos读写ntfs
+不识别机械硬盘
+bios boot菜单是否要清理
+安装后用kext wizard 或者命令安装驱动到s/l/e
+trim
+关闭睡眠
+声卡注入id是28
+>>>>>>> 4bf069ded1a461a8c8d5d24d0548893c86e0d128
 
 
 本文基于 RehabMan 教程
@@ -66,3 +87,8 @@ https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.cn.m
 # References
 
 https://www.insanelymac.com/forum/topic/339012-e3-1225v2%E2%86%92p4000-10144drive-failed-and-turbo-boost-bad/
+
+# 其他
+
+在 macOS 下压缩卷为 SSD 提供预留空间时，windows 和 macOS 可以一起从 Clover 引导了。
+但若 macOS 进行后续更新后就会无效
