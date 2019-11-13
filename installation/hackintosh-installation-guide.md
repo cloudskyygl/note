@@ -1,3 +1,6 @@
+https://github.com/RehabMan/hack-tools 中也有一些可能有用 kext
+
+
 本文基于 RehabMan 教程
 
 https://github.com/RehabMan/OS-X-Clover-Laptop-Config
@@ -28,7 +31,7 @@ https://github.com/RehabMan/OS-X-Clover-Laptop-Config
 
 ```
 $ sudo cp -R IO80211Family.kext /S/L/E
-$ sudo kext -i /
+$ sudo kextcache -i /
 ```
 
 # Audio - ALC269
